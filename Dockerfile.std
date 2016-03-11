@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 RUN	apt-get update && apt-get install -y wget && \
-    wget http://dl.ispsystem.com/install.sh && \
+	wget http://dl.ispsystem.com/install.sh && \
 	sh install.sh --release beta --ignore-hostname --silent --disable-fail2ban --noinstall && \
 	apt-get -y install coremanager vim && apt-get clean && rm -rf ${CORE_DIR}/var && \
 	apt-get -y update && apt-get -y install billmanager-standard vim && apt-get -y clean && \
