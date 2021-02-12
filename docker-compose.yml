@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  billmng-docker:
+    build: .
+    ports:
+      - "8008:1500"
+    environment:
+      BILLMGR_PASSWD: "change_me"
+      FORWARDED_SECRET: "change_me"
