@@ -7,3 +7,9 @@ services:
     environment:
       BILLMGR_PASSWD: "change_me"
       FORWARDED_SECRET: "change_me"
+    volumes:
+      - type: volume
+        source: /run/dbus/system_bus_socket
+        target: /run/dbus/system_bus_socket
+        read_only: true
+    privileged: true
